@@ -1,7 +1,8 @@
 :root{
-    --color-bg: #fae9af87;
-    --color-bg-header: #FBA808;
-    --color-font-main-header:#f6be64;
+    --color-bg: #f5f1e7;
+    --color-bg-header: #cabda5;
+    --color-font-main-header:#c1a78e;
+    --color-font-text: #c9b293;
 }
 
 body{
@@ -13,11 +14,17 @@ body{
 
 .header__section{
     background: var(--color-bg-header);
-    height: 6rem;
+    min-height: 6rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-wrap: wrap;
     padding: 0.5rem;
+}
+
+.header__logo{
+    width: 14rem;
 }
 
 .header__title{
@@ -26,6 +33,7 @@ body{
     text-wrap: wrap;
     color: white;
     font-weight: 600;
+    text-align: center;
 }
 
 .main__section{
@@ -66,7 +74,7 @@ body{
 }
 
 .main__steps{
-    color: #a4a4a4;
+    color: var(--color-font-text);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -74,13 +82,13 @@ body{
 }
 
 .main__steps span{
-    color: #ffc464;
+    color: var(--color-font-main-header);
     font-weight: 600;
 }
 
 .main__aclarations{
     margin-top: 2rem;
-    color: #a4a4a4
+    color: var(--color-font-text);
 }
 
 .footer__section{
@@ -101,4 +109,62 @@ body{
     color: white;
     font-size: 1rem;
     text-align: center;
+}
+
+@media only screen and (min-width:
+768px) {
+    .header__section{
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .header__logo{
+        width: 18rem;
+    }
+
+    .header__title{
+        font-size: 2rem;
+        text-wrap: nowrap;
+    }
+    
+    .main__section{
+        padding: 5rem 15rem;
+    }
+
+    .main__content{
+        align-items: flex-start;
+    }
+    
+    .main__title{
+        font-size: 3rem;
+    }
+    
+    .main__subtitle{
+        font-size: 2.5rem;
+    }
+    
+    .main__context{
+        width: 100%;
+        margin-top: 3rem;
+        gap: 3rem;
+    }
+
+    .main__steps{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .main__steps li{
+        max-width: 300px;
+    }
+
+    .main__aclarations{
+        margin-top: 2rem;
+        color: var(--color-font-text);
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+
 }
