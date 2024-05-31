@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/consulta-analisis-riesgo/static/css/main.33745bed.css",
+    "main.js": "/consulta-analisis-riesgo/static/js/main.8e4ccf70.js",
+    "static/js/453.25967cba.chunk.js": "/consulta-analisis-riesgo/static/js/453.25967cba.chunk.js",
+    "static/media/logo_continental.png": "/consulta-analisis-riesgo/static/media/logo_continental.264c321dbe86303ffaa4.png",
+    "index.html": "/consulta-analisis-riesgo/index.html",
+    "main.33745bed.css.map": "/consulta-analisis-riesgo/static/css/main.33745bed.css.map",
+    "main.8e4ccf70.js.map": "/consulta-analisis-riesgo/static/js/main.8e4ccf70.js.map",
+    "453.25967cba.chunk.js.map": "/consulta-analisis-riesgo/static/js/453.25967cba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33745bed.css",
+    "static/js/main.8e4ccf70.js"
+  ]
+}
