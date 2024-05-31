@@ -1,8 +1,9 @@
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import './Reset.css';
-import qr_icon from "./images/main_icons/qr.png";
-import scan_icon from "./images/main_icons/scan.png";
-import identify_icon from "./images/main_icons/identify.png";
+import qr_icon from "./img/main_icons/qr.png";
+import scan_icon from "./img/main_icons/scan.png";
+import identify_icon from "./img/main_icons/identify.png";
 import Header from './components/Header/Header';
 import Footer from "./components/Footer/Footer";
 

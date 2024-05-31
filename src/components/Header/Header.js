@@ -1,4 +1,4 @@
-import logo from "../../images/logo_continental.png";
+import logo from "../../img/logo_continental.png";
 import './Header.css';
 
 
