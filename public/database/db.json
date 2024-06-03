@@ -1,0 +1,689 @@
+{
+    "equipos": [
+      {
+        "id": 1,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo A",
+          "area": "Producción",
+          "proceso": "Corte",
+          "operacionEspecifica": "Corte de materiales",
+          "ultimoMantenimiento": "2024-05-15",
+          "cantidadOperarios": 3,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "si",
+          "tipoDeGuarda": "fija"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "sensor de proximidad",
+          "funcionDelDispositivo": "detener el equipo al detectar presencia"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "si",
+          "tiposDeMovimientos": "rotativos",
+          "generaCalor": "si",
+          "temperaturaMaxima": "hasta 80°C",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "si",
+          "descripcionDelRiesgo": "riesgo de corte al manipular"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "si",
+          "descripcionRiesgoCortantes": "riesgo de corte por contacto",
+          "tieneProyeccionDeParticulas": "si",
+          "descripcionRiesgoProyeccion": "riesgo por particulas proyectadas",
+          "tieneSuperficieCaliente": "si",
+          "temperaturaYDescripcionRiesgoTemperatura": "70°C, riesgo de quemaduras",
+          "otrosRiesgos": ["riesgo de atrapamiento", "riesgo eléctrico"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["corte", "quemadura", "atrapamiento"],
+          "localizacionDelDano": ["mano", "brazo", "pierna"],
+          "nivelDeDeficiencia": [3, 2, 4],
+          "nivelDeExposicion": [2, 3, 1],
+          "nivelDeProbabilidad": [6, 6, 4],
+          "nivelDeConsecuencia": [2, 3, 4],
+          "nivelDeRiesgo": [12, 18, 16],
+          "nivelDeIntervencion": ["medio", "alto", "medio"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["guantes", "gafas de seguridad", "protectores auditivos"]
+        }
+      },
+      {
+        "id": 2,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo B",
+          "area": "Ensamblaje",
+          "proceso": "Montaje",
+          "operacionEspecifica": "Ensamblaje de piezas",
+          "ultimoMantenimiento": "2024-04-10",
+          "cantidadOperarios": 4,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "no",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "no",
+          "tipoDeGuarda": "no aplica"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "interruptor de seguridad",
+          "funcionDelDispositivo": "desconectar el equipo en caso de emergencia"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "no",
+          "tiposDeMovimientos": "no aplica",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "si",
+          "descargaATierra": "mediante conexión a tierra",
+          "tienePartesCortantes": "no",
+          "descripcionDelRiesgo": "no aplica"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "no",
+          "descripcionRiesgoCortantes": "no aplica",
+          "tieneProyeccionDeParticulas": "no",
+          "descripcionRiesgoProyeccion": "no aplica",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["riesgo eléctrico"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["electrocución"],
+          "localizacionDelDano": ["cuerpo completo"],
+          "nivelDeDeficiencia": [5],
+          "nivelDeExposicion": [1],
+          "nivelDeProbabilidad": [5],
+          "nivelDeConsecuencia": [5],
+          "nivelDeRiesgo": [25],
+          "nivelDeIntervencion": ["muy alto"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["guantes aislantes", "calzado dieléctrico"]
+        }
+      },
+      {
+        "id": 3,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo C",
+          "area": "Pintura",
+          "proceso": "Pintado",
+          "operacionEspecifica": "Aplicación de pintura",
+          "ultimoMantenimiento": "2024-03-22",
+          "cantidadOperarios": 2,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "no",
+          "tipoDeGuarda": "no aplica"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "sistema de ventilación",
+          "funcionDelDispositivo": "eliminar vapores tóxicos"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "no",
+          "tiposDeMovimientos": "no aplica",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "si",
+          "descargaATierra": "mediante conexión a tierra",
+          "tienePartesCortantes": "no",
+          "descripcionDelRiesgo": "riesgo de inhalación de vapores tóxicos"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "no",
+          "descripcionRiesgoCortantes": "no aplica",
+          "tieneProyeccionDeParticulas": "no",
+          "descripcionRiesgoProyeccion": "no aplica",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["riesgo químico"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["inhalación de vapores"],
+          "localizacionDelDano": ["pulmones"],
+          "nivelDeDeficiencia": [4],
+          "nivelDeExposicion": [3],
+          "nivelDeProbabilidad": [12],
+          "nivelDeConsecuencia": [4],
+          "nivelDeRiesgo": [16],
+          "nivelDeIntervencion": ["alto"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["mascarilla respiratoria", "gafas de seguridad"]
+        }
+      },
+      {
+        "id": 4,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo D",
+          "area": "Almacenamiento",
+          "proceso": "Manejo de materiales",
+          "operacionEspecifica": "Transporte de productos",
+          "ultimoMantenimiento": "2024-06-01",
+          "cantidadOperarios": 5,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "no",
+          "esAccesible": "no aplica",
+          "colorYIdioma": "no aplica"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "no",
+          "tipoDeGuarda": "no aplica"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "reflectores de seguridad",
+          "funcionDelDispositivo": "mejorar visibilidad"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "si",
+          "tiposDeMovimientos": "traslación",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "no",
+          "descripcionDelRiesgo": "riesgo de golpe por movimiento"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "no",
+          "descripcionRiesgoCortantes": "no aplica",
+          "tieneProyeccionDeParticulas": "no",
+          "descripcionRiesgoProyeccion": "no aplica",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["riesgo de caída"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["golpe", "caída"],
+          "localizacionDelDano": ["cabeza", "piernas"],
+          "nivelDeDeficiencia": [3, 4],
+          "nivelDeExposicion": [3, 2],
+          "nivelDeProbabilidad": [9, 8],
+          "nivelDeConsecuencia": [2, 3],
+          "nivelDeRiesgo": [18, 16],
+          "nivelDeIntervencion": ["alto", "medio"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["casco", "calzado de seguridad"]
+        }
+      },
+      {
+        "id": 5,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo E",
+          "area": "Mantenimiento",
+          "proceso": "Reparación",
+          "operacionEspecifica": "Mantenimiento de máquinas",
+          "ultimoMantenimiento": "2024-02-28",
+          "cantidadOperarios": 3,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "si",
+          "tipoDeGuarda": "móvil"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "interruptor de seguridad",
+          "funcionDelDispositivo": "desconectar el equipo en caso de emergencia"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "si",
+          "tiposDeMovimientos": "rotativos",
+          "generaCalor": "si",
+          "temperaturaMaxima": "hasta 90°C",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "si",
+          "descripcionDelRiesgo": "riesgo de corte y quemaduras"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "si",
+          "descripcionRiesgoCortantes": "riesgo de corte por contacto",
+          "tieneProyeccionDeParticulas": "si",
+          "descripcionRiesgoProyeccion": "riesgo por partículas proyectadas",
+          "tieneSuperficieCaliente": "si",
+          "temperaturaYDescripcionRiesgoTemperatura": "80°C, riesgo de quemaduras",
+          "otrosRiesgos": ["riesgo de atrapamiento", "riesgo eléctrico"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["corte", "quemadura", "atrapamiento"],
+          "localizacionDelDano": ["mano", "brazo", "pierna"],
+          "nivelDeDeficiencia": [3, 4, 2],
+          "nivelDeExposicion": [3, 2, 4],
+          "nivelDeProbabilidad": [9, 8, 8],
+          "nivelDeConsecuencia": [2, 3, 2],
+          "nivelDeRiesgo": [18, 24, 16],
+          "nivelDeIntervencion": ["alto", "muy alto", "medio"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["guantes", "gafas de seguridad", "protectores auditivos"]
+        }
+      },
+      {
+        "id": 6,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo F",
+          "area": "Embalaje",
+          "proceso": "Empaque",
+          "operacionEspecifica": "Empaque de productos",
+          "ultimoMantenimiento": "2024-01-15",
+          "cantidadOperarios": 4,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "si",
+          "tipoDeGuarda": "fija"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "sensor de presión",
+          "funcionDelDispositivo": "detener el equipo al detectar presión anormal"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "si",
+          "tiposDeMovimientos": "alternativos",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "si",
+          "descripcionDelRiesgo": "riesgo de corte en la manipulación de cajas"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "si",
+          "descripcionRiesgoCortantes": "riesgo de corte por contacto",
+          "tieneProyeccionDeParticulas": "no",
+          "descripcionRiesgoProyeccion": "no aplica",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["riesgo de atrapamiento"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["corte", "atrapamiento"],
+          "localizacionDelDano": ["mano", "brazo"],
+          "nivelDeDeficiencia": [3, 2],
+          "nivelDeExposicion": [3, 4],
+          "nivelDeProbabilidad": [9, 8],
+          "nivelDeConsecuencia": [2, 3],
+          "nivelDeRiesgo": [18, 24],
+          "nivelDeIntervencion": ["alto", "muy alto"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["guantes", "gafas de seguridad"]
+        }
+      },
+      {
+        "id": 7,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo G",
+          "area": "Calidad",
+          "proceso": "Inspección",
+          "operacionEspecifica": "Control de calidad",
+          "ultimoMantenimiento": "2024-05-05",
+          "cantidadOperarios": 2,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "no",
+          "esAccesible": "no aplica",
+          "colorYIdioma": "no aplica"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "no",
+          "tipoDeGuarda": "no aplica"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "ninguno",
+          "funcionDelDispositivo": "no aplica"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "no",
+          "tiposDeMovimientos": "no aplica",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "no",
+          "descripcionDelRiesgo": "no aplica"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "no",
+          "descripcionRiesgoCortantes": "no aplica",
+          "tieneProyeccionDeParticulas": "no",
+          "descripcionRiesgoProyeccion": "no aplica",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["ninguno"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["ninguno"],
+          "localizacionDelDano": ["ninguno"],
+          "nivelDeDeficiencia": [0],
+          "nivelDeExposicion": [0],
+          "nivelDeProbabilidad": [0],
+          "nivelDeConsecuencia": [0],
+          "nivelDeRiesgo": [0],
+          "nivelDeIntervencion": ["ninguno"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["ninguno"]
+        }
+      },
+      {
+        "id": 8,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo H",
+          "area": "Limpieza",
+          "proceso": "Limpieza de instalaciones",
+          "operacionEspecifica": "Limpieza de pisos",
+          "ultimoMantenimiento": "2024-04-25",
+          "cantidadOperarios": 3,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "no",
+          "tipoDeGuarda": "no aplica"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "señalización",
+          "funcionDelDispositivo": "alertar a los operarios"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "no",
+          "tiposDeMovimientos": "no aplica",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "no",
+          "descripcionDelRiesgo": "riesgo de resbalones"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "no",
+          "descripcionRiesgoCortantes": "no aplica",
+          "tieneProyeccionDeParticulas": "no",
+          "descripcionRiesgoProyeccion": "no aplica",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["riesgo de caídas"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["resbalón", "caída"],
+          "localizacionDelDano": ["cuerpo completo"],
+          "nivelDeDeficiencia": [2, 3],
+          "nivelDeExposicion": [4, 2],
+          "nivelDeProbabilidad": [8, 6],
+          "nivelDeConsecuencia": [1, 2],
+          "nivelDeRiesgo": [8, 12],
+          "nivelDeIntervencion": ["bajo", "medio"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["calzado antideslizante"]
+        }
+      },
+      {
+        "id": 9,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo I",
+          "area": "Prensado",
+          "proceso": "Prensado de materiales",
+          "operacionEspecifica": "Prensado de metales",
+          "ultimoMantenimiento": "2024-03-10",
+          "cantidadOperarios": 3,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "si",
+          "tipoDeGuarda": "fija"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "sensor de proximidad",
+          "funcionDelDispositivo": "detener el equipo al detectar presencia"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "si",
+          "tiposDeMovimientos": "presión",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "si",
+          "descripcionDelRiesgo": "riesgo de aplastamiento y corte"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "si",
+          "descripcionRiesgoCortantes": "riesgo de corte por contacto",
+          "tieneProyeccionDeParticulas": "si",
+          "descripcionRiesgoProyeccion": "riesgo por partículas proyectadas",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["riesgo de atrapamiento"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["corte", "aplastamiento", "atrapamiento"],
+          "localizacionDelDano": ["mano", "brazo", "pierna"],
+          "nivelDeDeficiencia": [4, 4, 3],
+          "nivelDeExposicion": [3, 3, 2],
+          "nivelDeProbabilidad": [12, 12, 6],
+          "nivelDeConsecuencia": [3, 3, 2],
+          "nivelDeRiesgo": [36, 36, 12],
+          "nivelDeIntervencion": ["muy alto", "muy alto", "medio"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["guantes", "gafas de seguridad", "calzado de seguridad"]
+        }
+      },
+      {
+        "id": 10,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo J",
+          "area": "Soldadura",
+          "proceso": "Soldadura",
+          "operacionEspecifica": "Soldadura de metales",
+          "ultimoMantenimiento": "2024-02-15",
+          "cantidadOperarios": 2,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "si",
+          "tipoDeGuarda": "fija"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "máscara de soldadura",
+          "funcionDelDispositivo": "proteger contra chispas y radiación"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "no",
+          "tiposDeMovimientos": "no aplica",
+          "generaCalor": "si",
+          "temperaturaMaxima": "hasta 1500°C",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "no",
+          "descripcionDelRiesgo": "riesgo de quemaduras y radiación"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "no",
+          "descripcionRiesgoCortantes": "no aplica",
+          "tieneProyeccionDeParticulas": "si",
+          "descripcionRiesgoProyeccion": "riesgo por chispas proyectadas",
+          "tieneSuperficieCaliente": "si",
+          "temperaturaYDescripcionRiesgoTemperatura": "1500°C, riesgo de quemaduras severas",
+          "otrosRiesgos": ["riesgo de inhalación de humos"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["quemadura", "inhalación", "radiación"],
+          "localizacionDelDano": ["mano", "pulmones", "ojos"],
+          "nivelDeDeficiencia": [5, 4, 4],
+          "nivelDeExposicion": [3, 3, 3],
+          "nivelDeProbabilidad": [15, 12, 12],
+          "nivelDeConsecuencia": [4, 3, 4],
+          "nivelDeRiesgo": [60, 36, 48],
+          "nivelDeIntervencion": ["muy alto", "muy alto", "muy alto"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["máscara de soldadura", "guantes de soldador", "delantal de cuero"]
+        }
+      },
+      {
+        "id": 11,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo K",
+          "area": "Fresado",
+          "proceso": "Fresado de materiales",
+          "operacionEspecifica": "Fresado de piezas metálicas",
+          "ultimoMantenimiento": "2024-05-25",
+          "cantidadOperarios": 2,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "si",
+          "esAccesible": "si",
+          "colorYIdioma": "si"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "si",
+          "tipoDeGuarda": "fija"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "sensor de proximidad",
+          "funcionDelDispositivo": "detener el equipo al detectar presencia"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "si",
+          "tiposDeMovimientos": "rotativos",
+          "generaCalor": "si",
+          "temperaturaMaxima": "hasta 100°C",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "si",
+          "descripcionDelRiesgo": "riesgo de corte y quemaduras"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "si",
+          "descripcionRiesgoCortantes": "riesgo de corte por contacto",
+          "tieneProyeccionDeParticulas": "si",
+          "descripcionRiesgoProyeccion": "riesgo por partículas proyectadas",
+          "tieneSuperficieCaliente": "si",
+          "temperaturaYDescripcionRiesgoTemperatura": "100°C, riesgo de quemaduras",
+          "otrosRiesgos": ["riesgo de atrapamiento", "riesgo eléctrico"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["corte", "quemadura", "atrapamiento"],
+          "localizacionDelDano": ["mano", "brazo", "pierna"],
+          "nivelDeDeficiencia": [3, 4, 3],
+          "nivelDeExposicion": [3, 2, 4],
+          "nivelDeProbabilidad": [9, 8, 12],
+          "nivelDeConsecuencia": [2, 3, 2],
+          "nivelDeRiesgo": [18, 24, 24],
+          "nivelDeIntervencion": ["alto", "muy alto", "muy alto"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["guantes", "gafas de seguridad", "calzado de seguridad"]
+        }
+      },
+      {
+        "id": 12,
+        "informacionGeneral": {
+          "nombreDelEquipo": "Equipo L",
+          "area": "Pruebas",
+          "proceso": "Pruebas de resistencia",
+          "operacionEspecifica": "Pruebas de materiales",
+          "ultimoMantenimiento": "2024-04-15",
+          "cantidadOperarios": 1,
+          "imagen": ""
+        },
+        "paroDeEmergencia": {
+          "tieneParoDeEmergencia": "no",
+          "esAccesible": "no aplica",
+          "colorYIdioma": "no aplica"
+        },
+        "guardasDeSeguridad": {
+          "necesitaGuardas": "si",
+          "tipoDeGuarda": "móvil"
+        },
+        "dispositivosDeSeguridad": {
+          "tipoDeDispositivo": "sensor de presión",
+          "funcionDelDispositivo": "detener el equipo al detectar presión anormal"
+        },
+        "riesgosPotenciales": {
+          "tienePartesEnMovimiento": "si",
+          "tiposDeMovimientos": "alternativos",
+          "generaCalor": "no",
+          "temperaturaMaxima": "no aplica",
+          "generaElectricidadEstatica": "no",
+          "descargaATierra": "no aplica",
+          "tienePartesCortantes": "si",
+          "descripcionDelRiesgo": "riesgo de corte en la manipulación de probetas"
+        },
+        "materiasPrimasYProductos": {
+          "tieneSuperficiesCortantes": "si",
+          "descripcionRiesgoCortantes": "riesgo de corte por contacto",
+          "tieneProyeccionDeParticulas": "no",
+          "descripcionRiesgoProyeccion": "no aplica",
+          "tieneSuperficieCaliente": "no",
+          "temperaturaYDescripcionRiesgoTemperatura": "no aplica",
+          "otrosRiesgos": ["riesgo de atrapamiento"]
+        },
+        "determinacionDeRiesgos": {
+          "tiposDeDano": ["corte", "atrapamiento"],
+          "localizacionDelDano": ["mano", "brazo"],
+          "nivelDeDeficiencia": [3, 2],
+          "nivelDeExposicion": [2, 4],
+          "nivelDeProbabilidad": [6, 8],
+          "nivelDeConsecuencia": [2, 3],
+          "nivelDeRiesgo": [12, 24],
+          "nivelDeIntervencion": ["medio", "muy alto"]
+        },
+        "usoDeEPP": {
+          "equiposDeProteccionPersonal": ["guantes", "gafas de seguridad"]
+        }
+      }      
+    ]
+  }
+  
