@@ -3,11 +3,11 @@ import { Devices, Main } from "./pages";
 
 export const routes = [
     {
-        path: "/",
+        path: "/consulta-analisis-riesgo",
         element: <Main />
     },
     {
-        path: "/equipos",
+        path: "/consulta-analisis-riesgo/equipos",
         element: <Devices />
     },
 ]
