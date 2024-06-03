@@ -1,13 +1,14 @@
 import React from "react";
-import { Devices, Main } from "./pages";
+import Main from "./components/Main/Main";
+import Devices from "./components/Devices/Devices";
 
 export const routes = [
     {
-        path: "/consulta-analisis-riesgo",
+        path: "/",
         element: <Main />
     },
     {
-        path: "/consulta-analisis-riesgo/equipos",
+        path: "/equipos",
         element: <Devices />
     },
 ]

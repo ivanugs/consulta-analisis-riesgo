@@ -1,5 +1,4 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import './Reset.css';
 import Header from './components/Header/Header';
 import Footer from "./components/Footer/Footer";
 import { Suspense } from 'react';
