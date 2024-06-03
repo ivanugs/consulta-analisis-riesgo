@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/consulta-analisis-riesgo/static/css/main.33745bed.css",
-    "main.js": "/consulta-analisis-riesgo/static/js/main.8e4ccf70.js",
-    "static/js/453.25967cba.chunk.js": "/consulta-analisis-riesgo/static/js/453.25967cba.chunk.js",
+    "main.css": "/consulta-analisis-riesgo/static/css/main.02f8148d.css",
+    "main.js": "/consulta-analisis-riesgo/static/js/main.b1bd8b48.js",
+    "static/js/974.0c4a912e.chunk.js": "/consulta-analisis-riesgo/static/js/974.0c4a912e.chunk.js",
     "static/media/logo_continental.png": "/consulta-analisis-riesgo/static/media/logo_continental.264c321dbe86303ffaa4.png",
     "index.html": "/consulta-analisis-riesgo/index.html",
-    "main.33745bed.css.map": "/consulta-analisis-riesgo/static/css/main.33745bed.css.map",
-    "main.8e4ccf70.js.map": "/consulta-analisis-riesgo/static/js/main.8e4ccf70.js.map",
-    "453.25967cba.chunk.js.map": "/consulta-analisis-riesgo/static/js/453.25967cba.chunk.js.map"
+    "main.02f8148d.css.map": "/consulta-analisis-riesgo/static/css/main.02f8148d.css.map",
+    "main.b1bd8b48.js.map": "/consulta-analisis-riesgo/static/js/main.b1bd8b48.js.map",
+    "974.0c4a912e.chunk.js.map": "/consulta-analisis-riesgo/static/js/974.0c4a912e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33745bed.css",
-    "static/js/main.8e4ccf70.js"
+    "static/css/main.02f8148d.css",
+    "static/js/main.b1bd8b48.js"
   ]
 }
