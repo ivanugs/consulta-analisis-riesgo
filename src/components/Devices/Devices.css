@@ -1,0 +1,35 @@
+:root{
+    --color-bg: #f5f1e7;
+    --color-bg-header: #cabda5;
+    --color-font-main-header:#c1a78e;
+    --color-font-text: #c9b293;
+  }
+
+main{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.page_title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+    color: var(--color-font-main-header);
+}
+
+.card__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.3rem;
+}
+
+.card{
+    padding: 1rem 1.2rem;
+    border: 3px solid var(--color-bg-header);
+    border-radius: 0.8rem;
+    width: 100%;
+    box-sizing: border-box;
+}
