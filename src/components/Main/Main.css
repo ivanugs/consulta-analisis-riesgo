@@ -1,0 +1,123 @@
+:root{
+    --color-bg: #f5f1e7;
+    --color-bg-header: #cabda5;
+    --color-font-main-header:#c1a78e;
+    --color-font-text: #c9b293;
+  }
+  
+  body{
+    background: var(--color-bg);
+  }
+  
+  .main__section{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1rem;
+  }
+  
+  .main__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .main__title{
+    color: var(--color-font-main-header);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .main__subtitle{
+    color: var(--color-font-main-header);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .main__context{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .main__container__steps{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .main__steps{
+    color: var(--color-font-text);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .steps__icon{
+    align-self: center;
+    width: 150px;
+  }
+  
+  .main__steps span{
+    color: var(--color-font-main-header);
+    font-weight: 600;
+  }
+  
+  .main__aclarations{
+    margin-top: 2rem;
+    color: var(--color-font-text);
+  }
+  
+  @media only screen and (min-width:
+  768px) { 
+    .main__section{
+        padding: 5rem 15rem;
+    }
+  
+    .main__content{
+        align-items: flex-start;
+    }
+    
+    .main__title{
+        font-size: 3rem;
+    }
+    
+    .main__subtitle{
+        font-size: 2.5rem;
+    }
+    
+    .main__context{
+        width: 100%;
+        margin-top: 3rem;
+        gap: 3rem;
+    }
+  
+    .main__container__steps{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+  
+    .main__steps{
+      max-width: 300px;
+      flex-direction: column;
+      font-size: 1.5rem;
+    }
+  
+    .main__aclarations{
+        margin-top: 2rem;
+        color: var(--color-font-text);
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+  }
