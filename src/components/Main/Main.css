@@ -73,9 +73,15 @@
     color: var(--color-font-main-header);
     font-weight: 600;
   }
+
+  .main__link{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-font-main-header);
+  }
   
   .main__aclarations{
-    margin-top: 2rem;
+    margin: 1rem 0;
     color: var(--color-font-text);
   }
   

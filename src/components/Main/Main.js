@@ -2,6 +2,7 @@ import qr_icon from "../../img/main_icons/qr.png";
 import scan_icon from "../../img/main_icons/scan.png";
 import identify_icon from "../../img/main_icons/identify.png";
 import './Main.css';
+import { Link } from "react-router-dom";
 
 function Main() {
   return (
@@ -27,6 +28,9 @@ function Main() {
                 </div>
                 </div>
                 <p className="main__subtitle">¡Y listo!</p>
+                <Link className="main__link" to={`/equipos`}>
+                    <h2>Consultar listado de equipos</h2>
+                </Link>
             </div>
             <div className="main__aclarations">
                 <p>Cualquier aclaracion o duda consulta a tu equipo de EHS local.</p>

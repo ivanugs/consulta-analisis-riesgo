@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import "./Devices.css"
+import arrow from "../../img/device_icons/arrow.svg";
+import "./Devices.css";
+import { Link } from 'react-router-dom';
 
 const Devices = () => {
   const [equipos, setEquipos] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const equiposPerPage = 7; // Define cuántos equipos mostrar por página
 
   useEffect(() => {
     fetch("/database/db.json")
@@ -14,14 +18,33 @@ const Devices = () => {
       .catch(error => console.error('Error al cargar el archivo JSON:', error));
   }, []);
 
+  // Calcular los equipos a mostrar en la página actual
+  const indexOfLastEquipo = currentPage * equiposPerPage;
+  const indexOfFirstEquipo = indexOfLastEquipo - equiposPerPage;
+  const currentEquipos = equipos.slice(indexOfFirstEquipo, indexOfLastEquipo);
+
+  // Cambiar de página
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <main>
       <h1 className='page_title'>Listado de equipos</h1>
       <div className="card__container">
-        {equipos.map((equipo, index) => (
+        {currentEquipos.map((equipo, index) => (
           <div key={index} className="card">
-            <h2>{equipo.informacionGeneral.nombreDelEquipo}</h2>
+            <h2 className='card__title'>{equipo.informacionGeneral.nombreDelEquipo}</h2>
+            <img className='card__icon' src={arrow} alt='Arrow Icon' />
           </div>
+        ))}
+      </div>
+      <div className="pagination">
+        <Link to={`/`}>
+          <img className='pagination__back' src={arrow} alt='Arrow Icon' />
+        </Link>
+        {Array.from({ length: Math.ceil(equipos.length / equiposPerPage) }, (_, index) => (
+          <button key={index} onClick={() => paginate(index + 1)}>
+            {index + 1}
+          </button>
         ))}
       </div>
     </main>
@@ -29,5 +52,6 @@ const Devices = () => {
 };
 
 export default Devices;
+
 
 /* https://uiverse.io/aadium/mighty-dog-12 */
