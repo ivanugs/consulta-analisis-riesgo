@@ -59,3 +59,6 @@ export default Devices;
 
 
 /* https://uiverse.io/aadium/mighty-dog-12 */
+/* https://devsnap.me/css-dividers */
+/* https://qr.tool.be.continental.cloud/ */
+/* https://codepen.io/t_afif/pen/VwXOmjW */

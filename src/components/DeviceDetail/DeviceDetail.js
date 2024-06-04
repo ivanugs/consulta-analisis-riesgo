@@ -24,54 +24,57 @@ const DeviceDetail = () => {
     const { informacionGeneral, paroDeEmergencia, guardasDeSeguridad, dispositivosDeSeguridad, riesgosPotenciales, materiasPrimasYProductos, determinacionDeRiesgos, usoDeEPP } = equipo;
 
     return (
-        <div>
-            <h1>Detalles del equipo {informacionGeneral.nombreDelEquipo}</h1>
-            <p>Área: {informacionGeneral.area}</p>
-            <p>Proceso: {informacionGeneral.proceso}</p>
-            <p>Operación específica: {informacionGeneral.operacionEspecifica}</p>
-            <p>Último mantenimiento: {informacionGeneral.ultimoMantenimiento}</p>
-            <p>Cantidad de operarios: {informacionGeneral.cantidadOperarios}</p>
+        <main className='main__section-deviceDetail'>
+            <div className='general__information'>
+                <h2 className="fancy">Información General</h2>
+                <p><span>Detalles del equipo</span> {informacionGeneral.nombreDelEquipo}</p>
+                <p><span>Área:</span> {informacionGeneral.area}</p>
+                <p><span>Proceso:</span> {informacionGeneral.proceso}</p>
+                <p><span>Operación específica:</span> {informacionGeneral.operacionEspecifica}</p>
+                <p><span>Último mantenimiento:</span> {informacionGeneral.ultimoMantenimiento}</p>
+                <p><span>Cantidad de operarios:</span> {informacionGeneral.cantidadOperarios}</p>
+            </div>
             
             {paroDeEmergencia.tieneParoDeEmergencia !== "no aplica" && (
-                <div>
-                    <h2>Paro de Emergencia</h2>
-                    <p>Tiene Paro de Emergencia: {paroDeEmergencia.tieneParoDeEmergencia}</p>
-                    {paroDeEmergencia.tieneParoDeEmergencia !== "no" && <p>Es Accesible: {paroDeEmergencia.esAccesible}</p>}
-                    {paroDeEmergencia.tieneParoDeEmergencia !== "no" && <p>Color e Idioma: {paroDeEmergencia.colorYIdioma}</p>}
+                <div className='paro__emergencia'>
+                    <h2 className='fancy'>Paro de Emergencia</h2>
+                    <p><span>Tiene Paro de Emergencia:</span> {paroDeEmergencia.tieneParoDeEmergencia}</p>
+                    {paroDeEmergencia.tieneParoDeEmergencia !== "no" && <p><span>Es Accesible:</span> {paroDeEmergencia.esAccesible}</p>}
+                    {paroDeEmergencia.tieneParoDeEmergencia !== "no" && <p><span>Es color rojo y esta en español:</span> {paroDeEmergencia.colorYIdioma}</p>}
                 </div>
             )}
 
             {guardasDeSeguridad.necesitaGuardas !== "no aplica" && (
-                <div>
-                    <h2>Guardas de Seguridad</h2>
-                    <p>Necesita Guardas: {guardasDeSeguridad.necesitaGuardas}</p>
-                    {guardasDeSeguridad.tipoDeGuarda !== "no aplica" && <p>Tipo de Guarda: {guardasDeSeguridad.tipoDeGuarda}</p>}
+                <div className='guardas__seguridad'>
+                    <h2 className='fancy'>Guardas de Seguridad</h2>
+                    <p><span>Necesita Guardas:</span> {guardasDeSeguridad.necesitaGuardas}</p>
+                    {guardasDeSeguridad.tipoDeGuarda !== "no aplica" && <p><span>Tipo de Guarda:</span> {guardasDeSeguridad.tipoDeGuarda}</p>}
                 </div>
             )}
 
-            <div>
-                <h2>Dispositivos de Seguridad</h2>
-                <p>Tipo de Dispositivo: {dispositivosDeSeguridad.tipoDeDispositivo}</p>
-                <p>Función del Dispositivo: {dispositivosDeSeguridad.funcionDelDispositivo}</p>
+            <div className='safety__devices'>
+                <h2 className='fancy'>Dispositivos de Seguridad</h2>
+                <p><span>Tipo de Dispositivo:</span> {dispositivosDeSeguridad.tipoDeDispositivo}</p>
+                <p><span>Función del Dispositivo:</span> {dispositivosDeSeguridad.funcionDelDispositivo}</p>
             </div>
 
             {riesgosPotenciales.tienePartesEnMovimiento !== "no aplica" && (
-                <div>
-                    <h2>Riesgos Potenciales</h2>
-                    <p>Partes en Movimiento: {riesgosPotenciales.tienePartesEnMovimiento}</p>
-                    <p>Tipos de Movimientos: {riesgosPotenciales.tiposDeMovimientos}</p>
-                    <p>Genera Calor: {riesgosPotenciales.generaCalor}</p>
-                    <p>Temperatura Máxima: {riesgosPotenciales.temperaturaMaxima}</p>
-                    <p>Genera Electricidad Estática: {riesgosPotenciales.generaElectricidadEstatica}</p>
+                <div className='potential__risks'>
+                    <h2 className='fancy'>Riesgos Potenciales</h2>
+                    <p><span>Partes en Movimiento:</span> {riesgosPotenciales.tienePartesEnMovimiento}</p>
+                    <p><span>Tipos de Movimientos:</span> {riesgosPotenciales.tiposDeMovimientos}</p>
+                    <p><span>Genera Calor:</span> {riesgosPotenciales.generaCalor}</p>
+                    <p><span>Temperatura Máxima:</span> {riesgosPotenciales.temperaturaMaxima}</p>
+                    <p><span>Genera Electricidad Estática:</span> {riesgosPotenciales.generaElectricidadEstatica}</p>
                     {riesgosPotenciales.descargaATierra !== "no aplica" && <p>Descarga a Tierra: {riesgosPotenciales.descargaATierra}</p>}
-                    <p>Tiene Partes Cortantes: {riesgosPotenciales.tienePartesCortantes}</p>
-                    <p>Descripción del Riesgo: {riesgosPotenciales.descripcionDelRiesgo}</p>
+                    <p><span>Tiene Partes Cortantes:</span> {riesgosPotenciales.tienePartesCortantes}</p>
+                    <p><span>Descripción del Riesgo:</span> {riesgosPotenciales.descripcionDelRiesgo}</p>
                 </div>
             )}
 
             {materiasPrimasYProductos.tieneSuperficiesCortantes !== "no aplica" && (
-                <div>
-                    <h2>Materias Primas, Producto y Subproductos</h2>
+                <div className='materias__primas'>
+                    <h2 className='fancy'>Materias Primas, Producto y Subproductos</h2>
                     <p>Superficies Cortantes: {materiasPrimasYProductos.tieneSuperficiesCortantes}</p>
                     <p>Descripción del Riesgo: {materiasPrimasYProductos.descripcionRiesgoCortantes}</p>
                     <p>Proyección de Partículas: {materiasPrimasYProductos.tieneProyeccionDeParticulas}</p>
@@ -82,8 +85,8 @@ const DeviceDetail = () => {
                 </div>
             )}
 
-            <div>
-                <h2>Determinación de Riesgos</h2>
+            <div className='risks__clasification'>
+                <h2 className='fancy'>Determinación de Riesgos</h2>
                 <p>Tipo de Daño: {determinacionDeRiesgos.tiposDeDano.join(', ')}</p>
                 <p>Localización del Daño: {determinacionDeRiesgos.localizacionDelDano.join(', ')}</p>
                 <p>Nivel de Deficiencia: {determinacionDeRiesgos.nivelDeDeficiencia.join(', ')}</p>
@@ -94,11 +97,11 @@ const DeviceDetail = () => {
                 <p>Nivel de Intervención: {determinacionDeRiesgos.nivelDeIntervencion.join(', ')}</p>
             </div>
 
-            <div>
-                <h2>Uso de Equipo de Protección Personal</h2>
+            <div className='use__epp'>
+                <h2 className='fancy'>Uso de Equipo de Protección Personal</h2>
                 <p>Equipos de Protección Personal: {usoDeEPP.equiposDeProteccionPersonal.join(', ')}</p>
             </div>
-        </div>
+        </main>
     );
 };
 
