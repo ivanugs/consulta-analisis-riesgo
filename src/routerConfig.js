@@ -1,6 +1,6 @@
 import React from "react";
-import Main from "./components/Main/Main";
-import Devices from "./components/Devices/Devices";
+import { DeviceDetail, Devices, Main } from "./pages";
+
 
 export const routes = [
     {
@@ -8,7 +8,11 @@ export const routes = [
         element: <Main />
     },
     {
-        path: "/equipos",
+        path: "/devices",
         element: <Devices />
+    },
+    {
+        path: "/devices/:id",
+        element: <DeviceDetail />
     },
 ]

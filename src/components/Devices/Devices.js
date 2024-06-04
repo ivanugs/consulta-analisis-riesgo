@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Devices = () => {
   const [equipos, setEquipos] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const equiposPerPage = 7; // Define cuántos equipos mostrar por página
+  const equiposPerPage = 10; // Define cuántos equipos mostrar por página
 
   useEffect(() => {
     fetch("/database/db.json")
@@ -27,19 +27,23 @@ const Devices = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <main>
+    <main className='main__section-devices'>
       <h1 className='page_title'>Listado de equipos</h1>
       <div className="card__container">
         {currentEquipos.map((equipo, index) => (
           <div key={index} className="card">
             <h2 className='card__title'>{equipo.informacionGeneral.nombreDelEquipo}</h2>
-            <img className='card__icon' src={arrow} alt='Arrow Icon' />
+            <Link to={`/devices/${equipo.id}`}>
+              <img className='card__icon' src={arrow} alt='Arrow Icon' />
+            </Link>
           </div>
         ))}
       </div>
       <div className="pagination">
         <Link to={`/`}>
-          <img className='pagination__back' src={arrow} alt='Arrow Icon' />
+          <button>
+            <img className='icon__back' src={arrow} alt='Arrow Icon' />
+          </button>
         </Link>
         {Array.from({ length: Math.ceil(equipos.length / equiposPerPage) }, (_, index) => (
           <button key={index} onClick={() => paginate(index + 1)}>

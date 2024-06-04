@@ -5,10 +5,11 @@
     --color-font-text: #c9b293;
   }
 
-main{
+.main__section-devices {
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    min-height: 80vh;
+    min-height: 74.2vh;
+    padding: 1rem;
 }
 
 .page_title{
@@ -60,25 +61,19 @@ main{
     margin: 20px;
 }
 
-.pagination__back{
+.icon__back{
     width: 1.8rem;
     transform: rotate(180deg);
-    min-height: 50px;
-    background-color: var(--color-bg-header) ;
-    border: 1px solid rgb(139, 136, 136);
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
 }
   
 .pagination button {
     background-color: var(--color-bg-header);
     border: 1px solid rgb(139, 136, 136);
-    padding: 10px 15px;
     margin: 0 5px;
     cursor: pointer;
     border-radius: 5px;
+    width: 3rem;
+    height: 3rem;
 }
 
 .pagination button:hover {
@@ -90,3 +85,28 @@ main{
     cursor: not-allowed;
 }
   
+@media only screen and (min-width:
+768px) {
+    .main__section-devices{
+        padding: 2rem 15rem;
+    }
+
+    .footer__section{
+        position: static;
+        bottom: 0;
+    }
+
+    .page_title{
+        font-size: 2.8rem;
+    }
+
+    .card__container{
+        height: 500px;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        width: 400px;
+    }
+
+}

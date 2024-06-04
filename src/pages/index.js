@@ -1,6 +1,7 @@
 import Main from "../components/Main/Main";
-import React from "react";
+import { lazy } from "react";
 
 export { Main };
 
-export const Devices = React.lazy(() => import("../components/Devices/Devices"));
+export const Devices = lazy(() => {return import("../components/Devices/Devices")});
+export const DeviceDetail = lazy(() => {return import("../components/DeviceDetail/DeviceDetail")});

@@ -28,7 +28,7 @@ function Main() {
                 </div>
                 </div>
                 <p className="main__subtitle">¡Y listo!</p>
-                <Link className="main__link" to={`/equipos`}>
+                <Link className="main__link" to={`/devices`}>
                     <h2>Consultar listado de equipos</h2>
                 </Link>
             </div>
