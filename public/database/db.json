@@ -9,7 +9,7 @@
           "operacionEspecifica": "Corte de materiales",
           "ultimoMantenimiento": "2024-05-15",
           "cantidadOperarios": 3,
-          "imagen": ""
+          "imagen": "/img/ess-wss_test_bench.png"
         },
         "paroDeEmergencia": {
           "tieneParoDeEmergencia": "si",
@@ -30,11 +30,12 @@
           "generaCalor": "si",
           "temperaturaMaxima": "hasta 80°C",
           "generaElectricidadEstatica": "no",
-          "descargaATierra": "no aplica",
+          "descargaATierra": "",
           "tienePartesCortantes": "si",
           "descripcionDelRiesgo": "riesgo de corte al manipular"
         },
         "materiasPrimasYProductos": {
+          "aplicaMateriasPrimasYProductos": "si",
           "tieneSuperficiesCortantes": "si",
           "descripcionRiesgoCortantes": "riesgo de corte por contacto",
           "tieneProyeccionDeParticulas": "si",
@@ -44,14 +45,14 @@
           "otrosRiesgos": ["riesgo de atrapamiento", "riesgo eléctrico"]
         },
         "determinacionDeRiesgos": {
-          "tiposDeDano": ["corte", "quemadura", "atrapamiento"],
-          "localizacionDelDano": ["mano", "brazo", "pierna"],
-          "nivelDeDeficiencia": [3, 2, 4],
-          "nivelDeExposicion": [2, 3, 1],
-          "nivelDeProbabilidad": [6, 6, 4],
-          "nivelDeConsecuencia": [2, 3, 4],
-          "nivelDeRiesgo": [12, 18, 16],
-          "nivelDeIntervencion": ["medio", "alto", "medio"]
+          "tiposDeDano": ["Corte", "Quemadura", "Atrapamiento"],
+          "localizacionDelDano": ["Mano", "Brazo", "Pierna"],
+          "nivelDeDeficiencia": 2,
+          "nivelDeExposicion": 2,
+          "nivelDeProbabilidad": 1,
+          "nivelDeConsecuencia": 6,
+          "nivelDeRiesgo": "II",
+          "nivelDeIntervencion": ["Corregir y adoptar medidas de control."]
         },
         "usoDeEPP": {
           "equiposDeProteccionPersonal": ["guantes", "gafas de seguridad", "protectores auditivos"]

@@ -31,7 +31,7 @@
          #0000      calc(50% - var(--b)/2),
          var(--c) 0 calc(50% + var(--b)/2),
          #0000    0) 
-      1/0 var(--w)/calc(var(--w) + var(--g));
+      /* 1/0 var(--w)/calc(var(--w) + var(--g)) */;
     margin-inline: auto;
     font-size: 1.3rem;
     margin-block: .5rem;
@@ -50,7 +50,19 @@ p {
 }
 
 div{
+    margin-bottom: .5rem;
+}
+
+.general__information,
+.paro__emergencia,
+.guardas__seguridad,
+.safety__devices,
+.potential__risks,
+.materias__primas,
+.risks__clasification,
+.use__epp {
     display: flex;
     flex-direction: column;
     gap: .4rem;
+    margin-bottom: 2rem;
 }

@@ -27,6 +27,7 @@ const DeviceDetail = () => {
         <main className='main__section-deviceDetail'>
             <div className='general__information'>
                 <h2 className="fancy">Información General</h2>
+                <img src={informacionGeneral.imagen} alt='Equipo' />
                 <p><span>Detalles del equipo</span> {informacionGeneral.nombreDelEquipo}</p>
                 <p><span>Área:</span> {informacionGeneral.area}</p>
                 <p><span>Proceso:</span> {informacionGeneral.proceso}</p>
@@ -35,6 +36,7 @@ const DeviceDetail = () => {
                 <p><span>Cantidad de operarios:</span> {informacionGeneral.cantidadOperarios}</p>
             </div>
             
+
             {paroDeEmergencia.tieneParoDeEmergencia !== "no aplica" && (
                 <div className='paro__emergencia'>
                     <h2 className='fancy'>Paro de Emergencia</h2>
@@ -44,44 +46,86 @@ const DeviceDetail = () => {
                 </div>
             )}
 
+
             {guardasDeSeguridad.necesitaGuardas !== "no aplica" && (
                 <div className='guardas__seguridad'>
                     <h2 className='fancy'>Guardas de Seguridad</h2>
                     <p><span>Necesita Guardas:</span> {guardasDeSeguridad.necesitaGuardas}</p>
-                    {guardasDeSeguridad.tipoDeGuarda !== "no aplica" && <p><span>Tipo de Guarda:</span> {guardasDeSeguridad.tipoDeGuarda}</p>}
+                    {guardasDeSeguridad.necesitaGuardas !== "no" && <p><span>Tipo de Guarda:</span> {guardasDeSeguridad.tipoDeGuarda}</p>}
                 </div>
             )}
 
-            <div className='safety__devices'>
-                <h2 className='fancy'>Dispositivos de Seguridad</h2>
-                <p><span>Tipo de Dispositivo:</span> {dispositivosDeSeguridad.tipoDeDispositivo}</p>
-                <p><span>Función del Dispositivo:</span> {dispositivosDeSeguridad.funcionDelDispositivo}</p>
+
+            {dispositivosDeSeguridad.tipoDeDispositivo !== "" && (
+                <div className='safety__devices'>
+                    <h2 className='fancy'>Dispositivos de Seguridad</h2>
+                    <p><span>Tipo de Dispositivo:</span> {dispositivosDeSeguridad.tipoDeDispositivo}</p>
+                    <p><span>Función del Dispositivo:</span> {dispositivosDeSeguridad.funcionDelDispositivo}</p>
+                </div>
+            )}
+
+            
+            <div className='potential__risks'>
+                <h2 className='fancy'>Riesgos Potenciales</h2>
+                {riesgosPotenciales.tienePartesEnMovimiento !== "no" && (
+                    <div>
+                        <p><span>Partes en Movimiento:</span> {riesgosPotenciales.tienePartesEnMovimiento}</p>
+                        <p><span>Tipos de Movimientos:</span> {riesgosPotenciales.tiposDeMovimientos}</p>
+                    </div>
+                )}
+
+                {riesgosPotenciales.generaCalor !== "no" && (
+                    <div>
+                        <p><span>Genera Calor:</span> {riesgosPotenciales.generaCalor}</p>
+                        <p><span>Temperatura Máxima:</span> {riesgosPotenciales.temperaturaMaxima}</p>
+                    </div>
+                )}
+
+                {riesgosPotenciales.generaElectricidadEstatica !== "no" && (
+                    <div>
+                        <p><span>Genera Electricidad Estática:</span> {riesgosPotenciales.generaElectricidadEstatica}</p>
+                        <p><span>Descarga a Tierra</span>: {riesgosPotenciales.descargaATierra}</p>
+                    </div>
+                )}
+
+                {riesgosPotenciales.tienePartesCortantes !== "no" && (
+                    <div>
+                        <p><span>Tiene Partes Cortantes:</span> {riesgosPotenciales.tienePartesCortantes}</p>
+                        <p><span>Descripción del Riesgo:</span> {riesgosPotenciales.descripcionDelRiesgo}</p>
+                    </div>
+                )}
             </div>
 
-            {riesgosPotenciales.tienePartesEnMovimiento !== "no aplica" && (
-                <div className='potential__risks'>
-                    <h2 className='fancy'>Riesgos Potenciales</h2>
-                    <p><span>Partes en Movimiento:</span> {riesgosPotenciales.tienePartesEnMovimiento}</p>
-                    <p><span>Tipos de Movimientos:</span> {riesgosPotenciales.tiposDeMovimientos}</p>
-                    <p><span>Genera Calor:</span> {riesgosPotenciales.generaCalor}</p>
-                    <p><span>Temperatura Máxima:</span> {riesgosPotenciales.temperaturaMaxima}</p>
-                    <p><span>Genera Electricidad Estática:</span> {riesgosPotenciales.generaElectricidadEstatica}</p>
-                    {riesgosPotenciales.descargaATierra !== "no aplica" && <p><stand>Descarga a Tierra</stand>: {riesgosPotenciales.descargaATierra}</p>}
-                    <p><span>Tiene Partes Cortantes:</span> {riesgosPotenciales.tienePartesCortantes}</p>
-                    <p><span>Descripción del Riesgo:</span> {riesgosPotenciales.descripcionDelRiesgo}</p>
-                </div>
-            )}
 
-            {materiasPrimasYProductos.tieneSuperficiesCortantes !== "no aplica" && (
+            {materiasPrimasYProductos.aplicaMateriasPrimasYProductos !== "no aplica" && (
                 <div className='materias__primas'>
                     <h2 className='fancy'>Materias Primas, Producto y Subproductos</h2>
-                    <p><span>Superficies Cortantes:</span> {materiasPrimasYProductos.tieneSuperficiesCortantes}</p>
-                    <p><span>Descripción del Riesgo:</span> {materiasPrimasYProductos.descripcionRiesgoCortantes}</p>
-                    <p><span>Proyección de Partículas:</span> {materiasPrimasYProductos.tieneProyeccionDeParticulas}</p>
-                    <p><span>Descripción del Riesgo:</span> {materiasPrimasYProductos.descripcionRiesgoProyeccion}</p>
-                    <p><span>Superficie Caliente:</span> {materiasPrimasYProductos.tieneSuperficieCaliente}</p>
-                    <p><span>Temperatura y Descripción del Riesgo:</span> {materiasPrimasYProductos.temperaturaYDescripcionRiesgoTemperatura}</p>
-                    <p><span>Otros Riesgos:</span> {materiasPrimasYProductos.otrosRiesgos.join(', ')}</p>
+                    {materiasPrimasYProductos.tieneSuperficiesCortantes !== "no" && (
+                        <div>
+                            <p><span>Superficies Cortantes:</span> {materiasPrimasYProductos.tieneSuperficiesCortantes}</p>
+                            <p><span>Descripción del Riesgo:</span> {materiasPrimasYProductos.descripcionRiesgoCortantes}</p>
+                        </div>
+                    )}
+
+                    {materiasPrimasYProductos.tieneProyeccionDeParticulas !== "no" && (
+                        <div>
+                            <p><span>Proyección de Partículas:</span> {materiasPrimasYProductos.tieneProyeccionDeParticulas}</p>
+                            <p><span>Descripción del Riesgo:</span> {materiasPrimasYProductos.descripcionRiesgoProyeccion}</p>
+                        </div>
+                    )}
+                    
+                    {materiasPrimasYProductos.tieneSuperficieCaliente !== "no" && (
+                        <div>
+                            <p><span>Superficie Caliente:</span> {materiasPrimasYProductos.tieneSuperficieCaliente}</p>
+                            <p><span>Temperatura y Descripción del Riesgo:</span> {materiasPrimasYProductos.temperaturaYDescripcionRiesgoTemperatura}</p>
+                        </div>
+                    )}
+
+                    {materiasPrimasYProductos.otrosRiesgos && materiasPrimasYProductos.otrosRiesgos.length > 0 && (
+                        <div>
+                            <p><span>Otros Riesgos:</span> {materiasPrimasYProductos.otrosRiesgos.join(', ')}</p>
+                        </div>
+                    )}
                 </div>
             )}
 
@@ -89,12 +133,12 @@ const DeviceDetail = () => {
                 <h2 className='fancy'>Determinación de Riesgos</h2>
                 <p><span>Tipo de Daño:</span> {determinacionDeRiesgos.tiposDeDano.join(', ')}</p>
                 <p><span>Localización del Daño:</span> {determinacionDeRiesgos.localizacionDelDano.join(', ')}</p>
-                <p><span>Nivel de Deficiencia:</span> {determinacionDeRiesgos.nivelDeDeficiencia.join(', ')}</p>
-                <p><span>Nivel de Exposición:</span> {determinacionDeRiesgos.nivelDeExposicion.join(', ')}</p>
-                <p><span>Nivel de Probabilidad:</span> {determinacionDeRiesgos.nivelDeProbabilidad.join(', ')}</p>
-                <p><span>Nivel de Consecuencia:</span> {determinacionDeRiesgos.nivelDeConsecuencia.join(', ')}</p>
-                <p><span>Nivel de Riesgo:</span> {determinacionDeRiesgos.nivelDeRiesgo.join(', ')}</p>
-                <p><span>Nivel de Intervención:</span> {determinacionDeRiesgos.nivelDeIntervencion.join(', ')}</p>
+                <p><span>Nivel de Deficiencia:</span> {determinacionDeRiesgos.nivelDeDeficiencia}</p>
+                <p><span>Nivel de Exposición:</span> {determinacionDeRiesgos.nivelDeExposicion}</p>
+                <p><span>Nivel de Probabilidad:</span> {determinacionDeRiesgos.nivelDeProbabilidad}</p>
+                <p><span>Nivel de Consecuencia:</span> {determinacionDeRiesgos.nivelDeConsecuencia}</p>
+                <p><span>Nivel de Riesgo:</span> {determinacionDeRiesgos.nivelDeRiesgo}</p>
+                <p><span>Nivel de Intervención:</span> {determinacionDeRiesgos.nivelDeIntervencion}</p>
             </div>
 
             <div className='use__epp'>
