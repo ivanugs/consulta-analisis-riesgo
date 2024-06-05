@@ -66,7 +66,7 @@ const DeviceDetail = () => {
                     <p><span>Genera Calor:</span> {riesgosPotenciales.generaCalor}</p>
                     <p><span>Temperatura Máxima:</span> {riesgosPotenciales.temperaturaMaxima}</p>
                     <p><span>Genera Electricidad Estática:</span> {riesgosPotenciales.generaElectricidadEstatica}</p>
-                    {riesgosPotenciales.descargaATierra !== "no aplica" && <p>Descarga a Tierra: {riesgosPotenciales.descargaATierra}</p>}
+                    {riesgosPotenciales.descargaATierra !== "no aplica" && <p><stand>Descarga a Tierra</stand>: {riesgosPotenciales.descargaATierra}</p>}
                     <p><span>Tiene Partes Cortantes:</span> {riesgosPotenciales.tienePartesCortantes}</p>
                     <p><span>Descripción del Riesgo:</span> {riesgosPotenciales.descripcionDelRiesgo}</p>
                 </div>
@@ -75,31 +75,31 @@ const DeviceDetail = () => {
             {materiasPrimasYProductos.tieneSuperficiesCortantes !== "no aplica" && (
                 <div className='materias__primas'>
                     <h2 className='fancy'>Materias Primas, Producto y Subproductos</h2>
-                    <p>Superficies Cortantes: {materiasPrimasYProductos.tieneSuperficiesCortantes}</p>
-                    <p>Descripción del Riesgo: {materiasPrimasYProductos.descripcionRiesgoCortantes}</p>
-                    <p>Proyección de Partículas: {materiasPrimasYProductos.tieneProyeccionDeParticulas}</p>
-                    <p>Descripción del Riesgo: {materiasPrimasYProductos.descripcionRiesgoProyeccion}</p>
-                    <p>Superficie Caliente: {materiasPrimasYProductos.tieneSuperficieCaliente}</p>
-                    <p>Temperatura y Descripción del Riesgo: {materiasPrimasYProductos.temperaturaYDescripcionRiesgoTemperatura}</p>
-                    <p>Otros Riesgos: {materiasPrimasYProductos.otrosRiesgos.join(', ')}</p>
+                    <p><span>Superficies Cortantes:</span> {materiasPrimasYProductos.tieneSuperficiesCortantes}</p>
+                    <p><span>Descripción del Riesgo:</span> {materiasPrimasYProductos.descripcionRiesgoCortantes}</p>
+                    <p><span>Proyección de Partículas:</span> {materiasPrimasYProductos.tieneProyeccionDeParticulas}</p>
+                    <p><span>Descripción del Riesgo:</span> {materiasPrimasYProductos.descripcionRiesgoProyeccion}</p>
+                    <p><span>Superficie Caliente:</span> {materiasPrimasYProductos.tieneSuperficieCaliente}</p>
+                    <p><span>Temperatura y Descripción del Riesgo:</span> {materiasPrimasYProductos.temperaturaYDescripcionRiesgoTemperatura}</p>
+                    <p><span>Otros Riesgos:</span> {materiasPrimasYProductos.otrosRiesgos.join(', ')}</p>
                 </div>
             )}
 
             <div className='risks__clasification'>
                 <h2 className='fancy'>Determinación de Riesgos</h2>
-                <p>Tipo de Daño: {determinacionDeRiesgos.tiposDeDano.join(', ')}</p>
-                <p>Localización del Daño: {determinacionDeRiesgos.localizacionDelDano.join(', ')}</p>
-                <p>Nivel de Deficiencia: {determinacionDeRiesgos.nivelDeDeficiencia.join(', ')}</p>
-                <p>Nivel de Exposición: {determinacionDeRiesgos.nivelDeExposicion.join(', ')}</p>
-                <p>Nivel de Probabilidad: {determinacionDeRiesgos.nivelDeProbabilidad.join(', ')}</p>
-                <p>Nivel de Consecuencia: {determinacionDeRiesgos.nivelDeConsecuencia.join(', ')}</p>
-                <p>Nivel de Riesgo: {determinacionDeRiesgos.nivelDeRiesgo.join(', ')}</p>
-                <p>Nivel de Intervención: {determinacionDeRiesgos.nivelDeIntervencion.join(', ')}</p>
+                <p><span>Tipo de Daño:</span> {determinacionDeRiesgos.tiposDeDano.join(', ')}</p>
+                <p><span>Localización del Daño:</span> {determinacionDeRiesgos.localizacionDelDano.join(', ')}</p>
+                <p><span>Nivel de Deficiencia:</span> {determinacionDeRiesgos.nivelDeDeficiencia.join(', ')}</p>
+                <p><span>Nivel de Exposición:</span> {determinacionDeRiesgos.nivelDeExposicion.join(', ')}</p>
+                <p><span>Nivel de Probabilidad:</span> {determinacionDeRiesgos.nivelDeProbabilidad.join(', ')}</p>
+                <p><span>Nivel de Consecuencia:</span> {determinacionDeRiesgos.nivelDeConsecuencia.join(', ')}</p>
+                <p><span>Nivel de Riesgo:</span> {determinacionDeRiesgos.nivelDeRiesgo.join(', ')}</p>
+                <p><span>Nivel de Intervención:</span> {determinacionDeRiesgos.nivelDeIntervencion.join(', ')}</p>
             </div>
 
             <div className='use__epp'>
                 <h2 className='fancy'>Uso de Equipo de Protección Personal</h2>
-                <p>Equipos de Protección Personal: {usoDeEPP.equiposDeProteccionPersonal.join(', ')}</p>
+                <p><span>Equipos de Protección Personal:</span> {usoDeEPP.equiposDeProteccionPersonal.join(', ')}</p>
             </div>
         </main>
     );
