@@ -26,12 +26,5 @@
   text-align: center;
 }
 
-@media only screen and (min-width:
-768px) {
-  .footer__section{
-    position: absolute;
-    bottom: 0;
-  }
-}
 
   

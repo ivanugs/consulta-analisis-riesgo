@@ -34,7 +34,7 @@
       /* 1/0 var(--w)/calc(var(--w) + var(--g)) */;
     margin-inline: auto;
     font-size: 1.3rem;
-    margin-block: .5rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -54,15 +54,57 @@ div{
 }
 
 .general__information,
-.paro__emergencia,
 .guardas__seguridad,
 .safety__devices,
 .potential__risks,
 .materias__primas,
 .risks__clasification,
-.use__epp {
+.use__epp,
+.paro__emergencia{
     display: flex;
     flex-direction: column;
     gap: .4rem;
     margin-bottom: 2rem;
+}
+
+.general__information-content,
+.sections__content {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.general__information-image{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width:
+768px) {
+    .main__section-deviceDetail{
+        padding: 2rem 15rem;
+    }
+
+    .general__information{
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .general__information-image img{
+        width: 500px;
+    }
+
+    .general__information-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sections__content{
+        flex-direction: row;
+        justify-content: space-around;
+        text-wrap: wrap;
+    }
+    
 }
