@@ -9,7 +9,7 @@
           "operacionEspecifica": "Corte de materiales",
           "ultimoMantenimiento": "2024-05-15",
           "cantidadOperarios": 3,
-          "imagen": "/img/ess-wss_test_bench.png"
+          "imagen": "../img/ess-wss_test_bench.png"
         },
         "paroDeEmergencia": {
           "tieneParoDeEmergencia": "si",
