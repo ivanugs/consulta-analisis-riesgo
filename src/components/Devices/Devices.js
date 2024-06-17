@@ -28,15 +28,15 @@ const Devices = () => {
 
   return (
     <main className='main__section-devices'>
-      <h1 className='page_title'>Listado de equipos</h1>
+      <h1 className='page_title'>Listado de maquinarias y herramientas</h1>
       <div className="card__container">
         {currentEquipos.map((equipo, index) => (
+          <Link style={{textDecoration: 'none'}} to={`/devices/${equipo.id}`}>
           <div key={index} className="card">
             <h2 className='card__title'>{equipo.informacionGeneral.nombreDelEquipo}</h2>
-            <Link to={`/devices/${equipo.id}`}>
               <img className='card__icon' src={arrow} alt='Arrow Icon' />
-            </Link>
           </div>
+          </Link>
         ))}
       </div>
       <div className="pagination">
